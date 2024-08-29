@@ -10,26 +10,17 @@ export TERM="tmux-256color"
 
 export BROWSER="brave"
 
-JAVA_VERSION=20
-export JAVA_HOME=$(/usr/libexec/java_home -v $JAVA_VERSION)
-
 DEFAULT_USER=LukasVierheilig
 
 export XDG_CONFIG_HOME=$HOME/.config
 
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --color=never --follow --exclude .git'
+# Fuzzy Finder
+# fzf docs: https://github.com/junegunn/fzf
+
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --color=never --follow --exclude .git --strip-cwd-prefix'
 export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'
-
-
-# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-# export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always --line-range :50 {}' --preview-window=right:60%:wrap --extended"
-
 export FZF_CTRL_T_COMMAND="fd --type d . --color=never --hidden"
 export FZF_CTRL_T_OPTS="--preview 'tree -C {} | head -50'"
-
-
-# TMUX color voodo -> https://gpanders.com/blog/the-definitive-guide-to-using-tmux-256color-on-macos/
-# export TERMINFO_DIRS=$TERMINFO_DIRS:$HOME/.local/share/terminfo
 
 # Directories
 
