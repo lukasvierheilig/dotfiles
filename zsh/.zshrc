@@ -1,7 +1,11 @@
 # ~~~~~~~~~~~~~~~ Environment Valirables ~~~~~~~~~~~~~~~
 
+export ZSH="$HOME/.oh-my-zsh"
+
 GITHUBUSER=lukasvierheilig
 GITLABUSER=lukas4h
+
+ZSH_THEME="robbyrussell"
 
 export EDITOR="/usr/local/bin/nvim"
 export VISUAL="/usr/local/bin/nvim"
@@ -19,7 +23,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --color=never --follow --exclude .git --strip-cwd-prefix'
 export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'
-#export FZF_CTRL_T_COMMAND="fd --type d . --color=never --hidden"
+export FZF_CTRL_T_COMMAND="fd --type d . --color=never --hidden"
 export FZF_CTRL_T_OPTS="--preview 'tree -C {} | head -50'"
 
 # Directories
@@ -80,7 +84,8 @@ alias vim="nvim"
 
 
 source <(fzf --zsh)             # Set up fzf key bindings and fuzzy completion
-# source <(ng completion script)  # Load Angular CLI autocompletion.
+#source <(ng completion script)  # Load Angular CLI autocompletion.
+source $ZSH/oh-my-zsh.sh
 
 
 # ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
