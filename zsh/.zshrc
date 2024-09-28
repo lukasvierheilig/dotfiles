@@ -40,6 +40,8 @@ export DOTFILES="$GITHUBREPOS/dotfiles"
 
 setopt extended_glob null_glob
 
+export PATH=$PATH:$HOME/.local/bin
+
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -92,6 +94,7 @@ source $ZSH/oh-my-zsh.sh
 
 # ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
 
+poetry completions zsh > ~/.zfunc/_poetry
 
 fpath+=~/.zfunc
 
